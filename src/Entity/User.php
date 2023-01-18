@@ -129,28 +129,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->messages;
     }
 
-    public function addMessage(Message $message): self
-    {
-        if (!$this->messages->contains($message)) {
-            $this->messages->add($message);
-            $message->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeMessage(Message $message): self
-    {
-        if ($this->messages->removeElement($message)) {
-            // set the owning side to null (unless already changed)
-            if ($message->getUser() === $this) {
-                $message->setUser(null);
-            }
-        }
-
-        return $this;
-    }
-
     public function isSended(): ?bool
     {
         return $this->sended;
