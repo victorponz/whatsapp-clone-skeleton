@@ -38,7 +38,6 @@ class MessageRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
 //    /**
 //     * @return Message[] Returns an array of Message objects
 //     */
