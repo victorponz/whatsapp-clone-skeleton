@@ -164,16 +164,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
-    public function getLastConnection(): ?\DateTimeInterface
-    {
-        return $this->lastConnection;
-    }
-
-    public function setLastConnection(\DateTimeInterface $lastConnection): self
-    {
-        $this->lastConnection = $lastConnection;
-
-        return $this;
-    }
 }
